@@ -7,10 +7,6 @@
 - [mapper-spring-boot-starter](https://github.com/abel533/mapper-boot-starter)
 - [pagehelper-spring-boot-starter](https://github.com/pagehelper/pagehelper-spring-boot)
 
-## 新书《MyBatis 从入门到精通》
-
-![MyBatis 从入门到精通](https://github.com/mybatis-book/book/raw/master/book.png)
-
 CSDN博客：http://blog.csdn.net/isea533/article/details/73555400
 
 GitHub项目：https://github.com/mybatis-book/book

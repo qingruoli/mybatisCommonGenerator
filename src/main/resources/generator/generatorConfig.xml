@@ -123,4 +123,82 @@
         </table>
     </context>
 
+    <context id="settlement" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.gznb.member.util.BaseMapper"/>
+        </plugin>
+
+        <plugin type="com.mybatis.generator.plugin.JSR303Plugin"/>
+        <plugin type="com.mybatis.generator.plugin.LombokPlugin"/>
+
+        <!-- 数据Model链式构建插件 需要targetRuntime="MyBatis3" -->
+        <!--<plugin type="com.itfsw.mybatis.generator.plugins.ModelBuilderPlugin"/>-->
+
+        <!--<plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>-->
+        <!-- 自动生成equals方法和hashcode方法 -->
+        <!--<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"/>-->
+
+        <jdbcConnection driverClass="${spring.datasource.settlement.driver-class-name}"
+                        connectionURL="${spring.datasource.settlement.url}"
+                        userId="${spring.datasource.settlement.username}"
+                        password="${spring.datasource.settlement.password}">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="com.gznb.member.entity.settlement" targetProject="src/main/java"/>
+
+        <sqlMapGenerator targetPackage="mapper.settlement" targetProject="src/main/resources/"/>
+
+        <javaClientGenerator targetPackage="com.gznb.member.mapper.settlement" targetProject="src/main/java"
+                             type="XMLMAPPER"/>
+
+        <table tableName="%">
+            <!--mysql 配置-->
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+            <!--oracle 配置-->
+            <!--<generatedKey column="id" sqlStatement="select SEQ_{1}.nextval from dual" identity="false" type="pre"/>-->
+        </table>
+    </context>
+
+    <context id="coupon" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.gznb.member.util.BaseMapper"/>
+        </plugin>
+
+        <plugin type="com.mybatis.generator.plugin.JSR303Plugin"/>
+        <plugin type="com.mybatis.generator.plugin.LombokPlugin"/>
+
+        <!-- 数据Model链式构建插件 需要targetRuntime="MyBatis3" -->
+        <!--<plugin type="com.itfsw.mybatis.generator.plugins.ModelBuilderPlugin"/>-->
+
+        <!--<plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>-->
+        <!-- 自动生成equals方法和hashcode方法 -->
+        <!--<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"/>-->
+
+        <jdbcConnection driverClass="${spring.datasource.coupon.driver-class-name}"
+                        connectionURL="${spring.datasource.coupon.url}"
+                        userId="${spring.datasource.coupon.username}"
+                        password="${spring.datasource.coupon.password}">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="com.gznb.member.entity.coupon" targetProject="src/main/java"/>
+
+        <sqlMapGenerator targetPackage="mapper.coupon" targetProject="src/main/resources/"/>
+
+        <javaClientGenerator targetPackage="com.gznb.member.mapper.coupon" targetProject="src/main/java"
+                             type="XMLMAPPER"/>
+
+        <table tableName="%">
+            <!--mysql 配置-->
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+            <!--oracle 配置-->
+            <!--<generatedKey column="id" sqlStatement="select SEQ_{1}.nextval from dual" identity="false" type="pre"/>-->
+        </table>
+    </context>
+
 </generatorConfiguration>

@@ -1,4 +1,4 @@
-package com.gznb.member.conf.db;
+package com.example.conf.db;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.springframework.boot.bind.RelaxedPropertyResolver;
@@ -6,11 +6,7 @@ import org.springframework.context.EnvironmentAware;
 
 import java.sql.SQLException;
 
-/**
- * @author <a href="mailto:caolei@gznb.com">cl</a>
- * @version 1.0 & 2017/6/26
- * @since 1.0
- */
+
 public interface IDataSourrceEnvironmentAware extends EnvironmentAware {
 
     default DruidDataSource setCommonDataSourceProperties(RelaxedPropertyResolver relaxedPropertyResolver) throws SQLException {

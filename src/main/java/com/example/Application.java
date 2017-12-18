@@ -1,4 +1,4 @@
-package com.gznb.member;
+package com.example;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -10,14 +10,12 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 /**
- * @author liuzh
- * @since 2015-12-12 18:22
  */
 @Controller
 @EnableWebMvc
 @SpringBootApplication
 //@MapperScan(basePackages = "tk.mybatis.springboot.mapper")
-@ComponentScan("com.gznb.member")
+@ComponentScan("com.example")
 public class Application extends WebMvcConfigurerAdapter {
 
     public static void main(String[] args) {

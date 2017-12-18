@@ -1,12 +1,5 @@
-package com.gznb.member.conf.db;
+package com.example.conf.db;
 
-/**
- * @author <a href="mailto:caolei@gznb.com">cl</a>
- * @version 1.0 & 2017/6/26
- * @since 1.0
- * To change this template use File | Settings | Editor | File and Code Templates
- * Description:
- */
 
 import com.alibaba.druid.util.StringUtils;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -30,7 +23,7 @@ import java.sql.SQLException;
 import java.util.Arrays;
 
 @Configuration
-@MapperScan(basePackages = "com.gznb.member.mapper.member", sqlSessionTemplateRef = "memberSqlSessionTemplate")
+@MapperScan(basePackages = "com.example.mapper.member", sqlSessionTemplateRef = "memberSqlSessionTemplate")
 public class MemberConfig implements IDataSourrceEnvironmentAware {
     private static final Logger logger = LoggerFactory.getLogger(MemberConfig.class);
     private Environment environment;

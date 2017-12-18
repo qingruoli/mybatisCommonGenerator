@@ -11,7 +11,7 @@
         <property name="endingDelimiter" value="`"/>
 
         <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
-            <property name="mappers" value="com.gznb.member.util.BaseMapper"/>
+            <property name="mappers" value="com.example.util.BaseMapper"/>
         </plugin>
 
         <plugin type="com.mybatis.generator.plugin.JSR303Plugin"/>
@@ -30,11 +30,11 @@
                         password="${spring.datasource.account.password}">
         </jdbcConnection>
 
-        <javaModelGenerator targetPackage="com.gznb.member.entity.account" targetProject="src/main/java"/>
+        <javaModelGenerator targetPackage="com.example.entity.account" targetProject="src/main/java"/>
 
         <sqlMapGenerator targetPackage="mapper.account" targetProject="src/main/resources/"/>
 
-        <javaClientGenerator targetPackage="com.gznb.member.mapper.account" targetProject="src/main/java"
+        <javaClientGenerator targetPackage="com.example.mapper.account" targetProject="src/main/java"
                              type="XMLMAPPER"/>
 
         <table tableName="%">
@@ -50,7 +50,7 @@
         <property name="endingDelimiter" value="`"/>
 
         <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
-            <property name="mappers" value="com.gznb.member.util.BaseMapper"/>
+            <property name="mappers" value="com.example.util.BaseMapper"/>
         </plugin>
 
         <plugin type="com.mybatis.generator.plugin.JSR303Plugin"/>
@@ -69,11 +69,11 @@
                         password="${spring.datasource.config.password}">
         </jdbcConnection>
 
-        <javaModelGenerator targetPackage="com.gznb.omp.entity" targetProject="src/main/java"/>
+        <javaModelGenerator targetPackage="com.example.omp.entity" targetProject="src/main/java"/>
 
         <sqlMapGenerator targetPackage="mapper.config" targetProject="src/main/resources/"/>
 
-        <javaClientGenerator targetPackage="com.gznb.omp.mapper" targetProject="src/main/java"
+        <javaClientGenerator targetPackage="com.example.omp.mapper" targetProject="src/main/java"
                              type="XMLMAPPER"/>
 
         <table tableName="%">
@@ -89,7 +89,7 @@
         <property name="endingDelimiter" value="`"/>
 
         <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
-            <property name="mappers" value="com.gznb.member.util.BaseMapper"/>
+            <property name="mappers" value="com.example.util.BaseMapper"/>
         </plugin>
 
         <plugin type="com.mybatis.generator.plugin.JSR303Plugin"/>
@@ -108,11 +108,89 @@
                         password="${spring.datasource.activity.password}">
         </jdbcConnection>
 
-        <javaModelGenerator targetPackage="com.gznb.member.entity.activity" targetProject="src/main/java"/>
+        <javaModelGenerator targetPackage="com.example.entity.activity" targetProject="src/main/java"/>
 
         <sqlMapGenerator targetPackage="mapper.activity" targetProject="src/main/resources/"/>
 
-        <javaClientGenerator targetPackage="com.gznb.member.mapper.activity" targetProject="src/main/java"
+        <javaClientGenerator targetPackage="com.example.mapper.activity" targetProject="src/main/java"
+                             type="XMLMAPPER"/>
+
+        <table tableName="%">
+            <!--mysql 配置-->
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+            <!--oracle 配置-->
+            <!--<generatedKey column="id" sqlStatement="select SEQ_{1}.nextval from dual" identity="false" type="pre"/>-->
+        </table>
+    </context>
+
+    <context id="settlement" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.example.util.BaseMapper"/>
+        </plugin>
+
+        <plugin type="com.mybatis.generator.plugin.JSR303Plugin"/>
+        <plugin type="com.mybatis.generator.plugin.LombokPlugin"/>
+
+        <!-- 数据Model链式构建插件 需要targetRuntime="MyBatis3" -->
+        <!--<plugin type="com.itfsw.mybatis.generator.plugins.ModelBuilderPlugin"/>-->
+
+        <!--<plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>-->
+        <!-- 自动生成equals方法和hashcode方法 -->
+        <!--<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"/>-->
+
+        <jdbcConnection driverClass="${spring.datasource.settlement.driver-class-name}"
+                        connectionURL="${spring.datasource.settlement.url}"
+                        userId="${spring.datasource.settlement.username}"
+                        password="${spring.datasource.settlement.password}">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="com.example.entity.settlement" targetProject="src/main/java"/>
+
+        <sqlMapGenerator targetPackage="mapper.settlement" targetProject="src/main/resources/"/>
+
+        <javaClientGenerator targetPackage="com.example.mapper.settlement" targetProject="src/main/java"
+                             type="XMLMAPPER"/>
+
+        <table tableName="%">
+            <!--mysql 配置-->
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+            <!--oracle 配置-->
+            <!--<generatedKey column="id" sqlStatement="select SEQ_{1}.nextval from dual" identity="false" type="pre"/>-->
+        </table>
+    </context>
+
+    <context id="coupon" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.example.util.BaseMapper"/>
+        </plugin>
+
+        <plugin type="com.mybatis.generator.plugin.JSR303Plugin"/>
+        <plugin type="com.mybatis.generator.plugin.LombokPlugin"/>
+
+        <!-- 数据Model链式构建插件 需要targetRuntime="MyBatis3" -->
+        <!--<plugin type="com.itfsw.mybatis.generator.plugins.ModelBuilderPlugin"/>-->
+
+        <!--<plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>-->
+        <!-- 自动生成equals方法和hashcode方法 -->
+        <!--<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"/>-->
+
+        <jdbcConnection driverClass="${spring.datasource.coupon.driver-class-name}"
+                        connectionURL="${spring.datasource.coupon.url}"
+                        userId="${spring.datasource.coupon.username}"
+                        password="${spring.datasource.coupon.password}">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="com.example.entity.coupon" targetProject="src/main/java"/>
+
+        <sqlMapGenerator targetPackage="mapper.coupon" targetProject="src/main/resources/"/>
+
+        <javaClientGenerator targetPackage="com.example.mapper.coupon" targetProject="src/main/java"
                              type="XMLMAPPER"/>
 
         <table tableName="%">

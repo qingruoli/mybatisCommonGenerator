@@ -1,11 +1,11 @@
-package com.gznb.member;
+package com.example;
 
 import com.github.pagehelper.PageInfo;
-import com.gznb.member.entity.account.AccEWorkstation;
-import com.gznb.member.entity.activity.AEActivityDetail;
-import com.gznb.member.entity.member.MEMember;
-import com.gznb.member.service.ActivityService;
-import com.gznb.member.service.MemberService;
+import com.example.entity.account.AccEWorkstation;
+import com.example.entity.activity.AEActivityDetail;
+import com.example.entity.member.MEMember;
+import com.example.service.ActivityService;
+import com.example.service.MemberService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

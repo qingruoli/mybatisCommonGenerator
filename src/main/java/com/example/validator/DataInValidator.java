@@ -1,6 +1,6 @@
-package com.gznb.member.validator;
+package com.example.validator;
 
-import com.gznb.member.validator.annotation.DataIn;
+import com.example.validator.annotation.DataIn;
 import org.apache.commons.beanutils.ConvertUtils;
 import org.apache.commons.lang3.StringUtils;
 

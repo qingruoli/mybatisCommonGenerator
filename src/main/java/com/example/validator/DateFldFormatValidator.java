@@ -1,6 +1,6 @@
-package com.gznb.member.validator;
+package com.example.validator;
 
-import com.gznb.member.validator.annotation.DateFldFormat;
+import com.example.validator.annotation.DateFldFormat;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.DateUtils;
 

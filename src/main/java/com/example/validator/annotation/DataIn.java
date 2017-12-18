@@ -1,6 +1,6 @@
-package com.gznb.member.validator.annotation;
+package com.example.validator.annotation;
 
-import com.gznb.member.validator.DataInValidator;
+import com.example.validator.DataInValidator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
